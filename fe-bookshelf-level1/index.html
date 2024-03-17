@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom - Bookshelf Apps</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <aside class="display-flex flex-direction-column justify-content-center">
+            <div class="container">
+                <section>
+                    <h2 class="judul">Masukkan Buku Baru</h2>
+                    <form id="inputBook">
+                        <div class="input">
+                            <label for="inputBookTitle">Judul</label>
+                            <input id="inputBookTitle" type="text" tabindex="0" autofocus required>
+                        </div>
+                        <div class="input">
+                            <label for="inputBookAuthor">Penulis</label>
+                            <input id="inputBookAuthor" type="text" required>
+                        </div>
+                        <div class="input">
+                            <label for="inputBookYear">Tahun</label>
+                            <input id="inputBookYear" type="number" required>
+                        </div>
+                        <div class="input_inline">
+                            <label for="inputBookIsComplete">Selesai dibaca</label>
+                            <input id="inputBookIsComplete" type="checkbox" onclick="klikDibaca(event)">
+                        </div>
+                        <div id="blokTombol">
+                            <button class="btn-proses mb-10" id="bookSubmit" type="submit">Masukkan Buku ke rak
+                                <span>Belum
+                                    selesai
+                                    dibaca</span></button>
+                            <button class="btn-batal" id="bookBatal" type="reset" onclick="klikBatal()">Batal</button>
+                        </div>
+                    </form>
+                </section>
+
+                <section>
+                    <h2 class="judul">Cari Buku (Opsional)</h2>
+                    <form id="searchBook" class="input">
+                        <label for="searchBookTitle">Judul</label>
+                        <input id="searchBookTitle" class="mb-10" type="text">
+                        <button class="btn-proses" id="searchSubmit" type="submit">Cari</button>
+                    </form>
+                </section>
+            </div>
+        </aside>
+
+        <div id="container" class="container display-flex flex-direction-column justify-content-center">
+
+            <section>
+                <h2 class="judul">Belum selesai dibaca</h2>
+
+                <div id="incompleteBookshelfList">
+                </div>
+            </section>
+
+            <section>
+                <h2 class="judul">Selesai dibaca</h2>
+
+                <div id="completeBookshelfList">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
