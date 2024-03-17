@@ -6,7 +6,7 @@ let textBtn = document.getElementById('bookSubmit');
 
 async function GetRequest(to) {
     try {
-        const response = await fetch(`http://localhost/smkti/restapi-bookshelf-level1/${to}`, {
+        const response = await fetch(`http://localhost/smkti/FE-BE-bookshelf-level1/restapi-bookshelf-level1/${to}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -27,7 +27,7 @@ async function GetRequest(to) {
 
 async function PostRequestJSON(to, data) {
     try {
-        const response = await fetch(`http://localhost/smkti/restapi-bookshelf-level1/${to}`, {
+        const response = await fetch(`http://localhost/smkti/FE-BE-bookshelf-level1/restapi-bookshelf-level1/${to}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -49,7 +49,7 @@ async function PostRequest(to, data) {
             formData.append(key, data[key]);
         }
 
-        const response = await fetch(`http://localhost/smkti/restapi-bookshelf-level1/${to}`, {
+        const response = await fetch(`http://localhost/smkti/FE-BE-bookshelf-level1/restapi-bookshelf-level1/${to}`, {
             method: 'POST',
             body: formData
         });
